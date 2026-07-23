@@ -251,68 +251,43 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── MANIFESTO ── */}
+      {/* ── MANIFESTO (diptych) ── */}
       <section id="manifesto" style={{ overflow: "hidden" }}>
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="manifesto-diptych">
 
           {/* Panel 1 — MASS TO CLASS (warm paper) */}
-          <div
-            style={{
-              background: PAPER,
-              padding: "clamp(56px, 9vw, 112px) clamp(28px, 6vw, 84px)",
-              borderRight: `1px solid rgba(16,15,12,0.09)`,
-              borderBottom: `1px solid rgba(16,15,12,0.09)`,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              gap: 32,
-            }}
-          >
+          <div className="manifesto-panel" style={{ background: PAPER, borderRight: `1px solid rgba(16,15,12,0.09)`, borderBottom: `1px solid rgba(16,15,12,0.09)`, color: INK }}>
             <span style={{ ...B, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(16,15,12,0.28)" }}>
               {lang === "en" ? "01 · Brand Manifesto" : "01 · 品牌宣言"}
             </span>
 
             <div>
-              <div style={{ overflow: "hidden", lineHeight: 0.82, marginBottom: 28 }}>
-                <p style={{ ...D, fontWeight: 900, fontSize: "clamp(52px, 8.8vw, 128px)", letterSpacing: "-0.025em", lineHeight: 0.82, color: INK, margin: 0, userSelect: "none" }}>
-                  MASS<br />TO<br />CLASS.
-                </p>
-              </div>
-              <p style={{ ...S, fontSize: "clamp(22px, 3.2vw, 46px)", color: BRONZE, lineHeight: 1.05, letterSpacing: "0.05em", marginBottom: 14 }}>
+              <p className="manifesto-title" style={{ ...D, fontWeight: 900, letterSpacing: "-0.025em", color: INK, margin: "0 0 28px", userSelect: "none" }}>
+                MASS<br />TO<br />CLASS.
+              </p>
+              <p style={{ ...S, fontSize: "clamp(20px, 2.4vw, 40px)", color: BRONZE, lineHeight: 1.05, letterSpacing: "0.05em", marginBottom: 14 }}>
                 博觀而約取
               </p>
-              <p style={{ ...S, fontSize: "clamp(13px, 1.2vw, 16px)", color: "rgba(16,15,12,0.46)", lineHeight: 1.75 }}>
+              <p style={{ ...S, fontSize: "clamp(13px, 1.1vw, 16px)", color: "rgba(16,15,12,0.46)", lineHeight: 1.75 }}>
                 From volume to excellence —<br />gather widely, choose precisely.
               </p>
             </div>
           </div>
 
           {/* Panel 2 — LAST TO BLAST (warm dark) */}
-          <div
-            style={{
-              background: "#1A1410",
-              padding: "clamp(56px, 9vw, 112px) clamp(28px, 6vw, 84px)",
-              borderBottom: `1px solid rgba(248,245,238,0.06)`,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              gap: 32,
-            }}
-          >
+          <div className="manifesto-panel" style={{ background: "#1A1410", borderBottom: `1px solid rgba(248,245,238,0.06)`, color: PAPER }}>
             <span style={{ ...B, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(248,245,238,0.22)" }}>
               {lang === "en" ? "02 · Brand Manifesto" : "02 · 品牌宣言"}
             </span>
 
             <div>
-              <div style={{ overflow: "hidden", lineHeight: 0.82, marginBottom: 28 }}>
-                <p style={{ ...D, fontWeight: 900, fontSize: "clamp(52px, 8.8vw, 128px)", letterSpacing: "-0.025em", lineHeight: 0.82, color: PAPER, margin: 0, userSelect: "none" }}>
-                  LAST<br />TO<br />BLAST.
-                </p>
-              </div>
-              <p style={{ ...S, fontSize: "clamp(22px, 3.2vw, 46px)", color: BRONZE_LIGHT, lineHeight: 1.05, letterSpacing: "0.05em", marginBottom: 14 }}>
+              <p className="manifesto-title" style={{ ...D, fontWeight: 900, letterSpacing: "-0.025em", color: PAPER, margin: "0 0 28px", userSelect: "none" }}>
+                LAST<br />TO<br />BLAST.
+              </p>
+              <p style={{ ...S, fontSize: "clamp(20px, 2.4vw, 40px)", color: BRONZE_LIGHT, lineHeight: 1.05, letterSpacing: "0.05em", marginBottom: 14 }}>
                 厚積而薄發
               </p>
-              <p style={{ ...S, fontSize: "clamp(13px, 1.2vw, 16px)", color: "rgba(248,245,238,0.36)", lineHeight: 1.75 }}>
+              <p style={{ ...S, fontSize: "clamp(13px, 1.1vw, 16px)", color: "rgba(248,245,238,0.36)", lineHeight: 1.75 }}>
                 From patience to breakthrough —<br />build deep, then release with force.
               </p>
             </div>
