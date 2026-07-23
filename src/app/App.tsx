@@ -513,20 +513,27 @@ function PillarRow({ pillar, lang, accent }: { pillar: typeof PILLARS[0]; lang: 
     <div
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
-      style={{ borderTop: `1px solid rgba(16,15,12,0.1)`, padding: "40px 0 44px", background: hov ? "rgba(16,15,12,0.02)" : "transparent", transition: "background 0.3s", cursor: "default" }}
+      style={{ borderTop: `1px solid rgba(16,15,12,0.1)`, padding: "36px 0 44px", background: hov ? "rgba(16,15,12,0.018)" : "transparent", transition: "background 0.3s", cursor: "default" }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-[auto_minmax(0,1.4fr)_minmax(160px,0.75fr)] gap-6 lg:gap-10 xl:gap-14 items-start">
-        <div style={{ minWidth: 0 }}>
-          <div style={{ ...D, fontWeight: 900, fontSize: "clamp(40px, 5vw, 80px)", letterSpacing: "-0.02em", lineHeight: 0.88, color: INK, whiteSpace: "nowrap" }}>
+      {/* Row 1: pillar name spans full width — no column competition */}
+      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 24, gap: 16 }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 14, flexWrap: "wrap", minWidth: 0 }}>
+          <div style={{ ...D, fontWeight: 900, fontSize: "clamp(52px, 8.5vw, 120px)", letterSpacing: "-0.025em", lineHeight: 0.86, color: INK, flexShrink: 0 }}>
             {pillar.key}
           </div>
-          <div style={{ ...S, fontSize: 15, color: MID, marginTop: 10, letterSpacing: "0.03em" }}>{pillar.zh}</div>
-          <div style={{ marginTop: 12, width: 22, height: 2, background: accent }} />
+          <div style={{ ...S, fontSize: 15, color: MID, letterSpacing: "0.03em", paddingBottom: 4 }}>
+            {pillar.zh}
+          </div>
         </div>
-        <div style={{ paddingTop: 2, minWidth: 0 }}>
-          <p style={{ fontSize: "clamp(14px, 1.3vw, 17px)", lineHeight: 1.8, color: "#3E3B35", maxWidth: 520 }}>{pillar.desc[lang]}</p>
-        </div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 6, paddingTop: 4, minWidth: 0 }} className="lg:flex-col">
+        <div style={{ width: 28, height: 2, background: accent, flexShrink: 0, marginBottom: 6 }} />
+      </div>
+
+      {/* Row 2: description + tags, safely below the large text */}
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-6 lg:gap-16">
+        <p style={{ fontSize: "clamp(14px, 1.3vw, 17px)", lineHeight: 1.82, color: "#3E3B35", maxWidth: 580 }}>
+          {pillar.desc[lang]}
+        </p>
+        <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 2 }}>
           {pillar.tags[lang].map(tag => (
             <span key={tag} style={{ ...B, fontSize: 11, letterSpacing: "0.07em", color: MID }}>— {tag}</span>
           ))}
