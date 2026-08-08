@@ -304,4 +304,97 @@
     opacity: 0.35;
     transform: none;
   }
+
+  .ultimate-suite__card.is-active .ultimate-suite__sheen {
+    animation: none;
+    opacity: 0.35;
+    transform: none;
+  }
+
+  .ultimate-suite__card.is-active .ultimate-suite__glow-ring {
+    animation: none;
+  }
+}
+
+/* Ultimate Suite — spotlight hover + flowing border glow */
+.ultimate-suite__card {
+  overflow: hidden;
+}
+
+.ultimate-suite__sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 28%,
+    rgba(238, 240, 248, 0.1) 48%,
+    transparent 68%
+  );
+  transform: translateX(-60%);
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+.ultimate-suite__glow-ring {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    var(--card-accent) 35%,
+    transparent 55%,
+    var(--card-accent) 75%,
+    transparent 100%
+  );
+  background-size: 220% 220%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  z-index: 0;
+  transition: opacity 0.35s ease;
+}
+
+.ultimate-suite__card.is-active .ultimate-suite__sheen {
+  opacity: 1;
+  animation: ultimate-suite-sheen-sweep 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ultimate-suite__card.is-active .ultimate-suite__glow-ring {
+  opacity: 0.85;
+  animation: ultimate-suite-glow-flow 2.4s linear infinite;
+}
+
+.ultimate-suite__card > *:not(.ultimate-suite__sheen):not(.ultimate-suite__glow-ring) {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes ultimate-suite-sheen-sweep {
+  from {
+    transform: translateX(-70%);
+  }
+  to {
+    transform: translateX(70%);
+  }
+}
+
+@keyframes ultimate-suite-glow-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }

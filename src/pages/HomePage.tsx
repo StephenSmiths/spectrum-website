@@ -29,6 +29,7 @@ import {
 import { featuredShowcases, publishedShowcases } from "@/content/showcases";
 import { CoreAdvantagesSection } from "@/components/sections/CoreAdvantagesSection";
 import { DriveModelSection } from "@/components/sections/DriveModelSection";
+import { UltimateSuiteSection } from "@/components/sections/UltimateSuiteSection";
 
 const D = fontDisplay;
 const S = fontSerif;
@@ -191,6 +192,9 @@ function HomeInner({ lang }: { lang: Lang }) {
 
       {/* D.R.I.V.E. STRATEGIC MODEL */}
       <DriveModelSection lang={lang} />
+
+      {/* ULTIMATE SUITE — Toolset × Skillset × Mindset */}
+      <UltimateSuiteSection lang={lang} />
 
       {/* SOLUTIONS */}
       <section id="solutions" style={{ background: aurora({ t: "70% 60%", p: "15% 35%", opacity: 0.55 }), paddingTop: "clamp(64px, 8vw, 100px)", paddingBottom: "clamp(64px, 8vw, 100px)", paddingLeft: 28, paddingRight: 28 }} className="lg:px-12">
