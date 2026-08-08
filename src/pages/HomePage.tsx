@@ -35,45 +35,6 @@ const D = fontDisplay;
 const S = fontSerif;
 const Bd = fontBody;
 
-const PILLARS = [
-  {
-    key: "TOOLSET", zh: "工具集",
-    accent: TEAL,
-    desc: {
-      en: "The systems, platforms, and automation that eliminate friction and multiply your operational capacity.",
-      zh: "消除摩擦、倍增運營能力的系統、平台與自動化工具。",
-    },
-    tags: {
-      en: ["Workflow Automation", "Sales Systems", "CX Platforms", "Observation Room"],
-      zh: ["工作流程自動化", "銷售系統", "客戶體驗平台", "觀察室系統"],
-    },
-  },
-  {
-    key: "SKILLSET", zh: "技能集",
-    accent: GOLD,
-    desc: {
-      en: "The human capabilities — precision, confidence, and judgment — your people build to perform at their best.",
-      zh: "您的員工建立精確、自信與判斷力，以最佳狀態執行工作的人才能力。",
-    },
-    tags: {
-      en: ["Capability Building", "Emotion Detection", "Behavioural Analysis", "Sales Enablement"],
-      zh: ["能力建設", "情緒感知", "行為分析", "銷售賦能"],
-    },
-  },
-  {
-    key: "MINDSET", zh: "思維集",
-    accent: PURPLE,
-    desc: {
-      en: "The strategic orientation that aligns your entire organisation toward its most enduring ambitions.",
-      zh: "使整個組織與最長遠願景保持一致的策略思維方向。",
-    },
-    tags: {
-      en: ["Leadership Development", "Culture Change", "Strategic Clarity", "Regional Expansion"],
-      zh: ["領導力發展", "文化變革", "策略清晰度", "區域擴張"],
-    },
-  },
-];
-
 const SOLUTIONS = {
   en: ["Workflow Automation", "Sales-Core Automation", "Customer Experience Optimisation", "Employee Capability Building", "Emotion Detection", "Behavioural Analysis", "Observation Room System"],
   zh: ["工作流程自動化", "銷售核心自動化", "客戶體驗優化", "員工能力建設", "情緒感知分析", "行為分析系統", "觀察室系統"],
@@ -179,22 +140,11 @@ function HomeInner({ lang }: { lang: Lang }) {
       {/* CORE ADVANTAGES */}
       <CoreAdvantagesSection lang={lang} />
 
-      {/* APPROACH */}
-      <section id="approach" style={{ background: aurora({ t: "80% 30%", p: "20% 70%", opacity: 0.6 }), paddingTop: "clamp(64px, 8vw, 100px)", paddingBottom: 0, paddingLeft: 28, paddingRight: 28 }} className="lg:px-12">
-        <div className="max-w-[1440px] mx-auto">
-          <SectionLabel left={lang === "en" ? "Our Philosophy" : "我們的理念"} right={lang === "en" ? "Three Dimensions" : "三個維度"} />
-          <div style={{ marginTop: 48 }}>
-            {PILLARS.map((p) => <PillarRow key={p.key} pillar={p} lang={lang} />)}
-            <div style={{ height: 1, background: "rgba(238,240,248,0.08)" }} />
-          </div>
-        </div>
-      </section>
+      {/* ULTIMATE SUITE — Toolset × Skillset × Mindset (replaces Approach pillars) */}
+      <UltimateSuiteSection lang={lang} />
 
       {/* D.R.I.V.E. STRATEGIC MODEL */}
       <DriveModelSection lang={lang} />
-
-      {/* ULTIMATE SUITE — Toolset × Skillset × Mindset */}
-      <UltimateSuiteSection lang={lang} />
 
       {/* SOLUTIONS */}
       <section id="solutions" style={{ background: aurora({ t: "70% 60%", p: "15% 35%", opacity: 0.55 }), paddingTop: "clamp(64px, 8vw, 100px)", paddingBottom: "clamp(64px, 8vw, 100px)", paddingLeft: 28, paddingRight: 28 }} className="lg:px-12">
@@ -375,28 +325,6 @@ function SectionLabel({ left, right }: { left: string; right: string }) {
       <span style={{ ...Bd, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: GHOST, whiteSpace: "nowrap" }}>{left}</span>
       <div style={{ flex: 1, height: 1, background: "rgba(238,240,248,0.08)" }} />
       <span style={{ ...Bd, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: GHOST, whiteSpace: "nowrap" }}>{right}</span>
-    </div>
-  );
-}
-
-function PillarRow({ pillar, lang }: { pillar: (typeof PILLARS)[0]; lang: Lang }) {
-  return (
-    <div style={{ borderTop: "1px solid rgba(238,240,248,0.08)", padding: "36px 0 44px" }}>
-      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 24, gap: 16 }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 14, flexWrap: "wrap", minWidth: 0 }}>
-          <div style={{ ...D, fontWeight: 900, fontSize: "clamp(52px, 8.5vw, 120px)", letterSpacing: "-0.025em", lineHeight: 0.86, color: IVORY }}>{pillar.key}</div>
-          <div style={{ ...S, fontSize: 15, color: DIM, letterSpacing: "0.03em", paddingBottom: 4 }}>{pillar.zh}</div>
-        </div>
-        <div style={{ width: 28, height: 2, background: pillar.accent, flexShrink: 0, marginBottom: 6, boxShadow: `0 0 12px ${pillar.accent}` }} />
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-6 lg:gap-16">
-        <p style={{ fontSize: "clamp(14px, 1.3vw, 17px)", lineHeight: 1.82, color: DIM, maxWidth: 580 }}>{pillar.desc[lang]}</p>
-        <div style={{ display: "flex", flexDirection: "column", gap: 7, paddingTop: 2 }}>
-          {pillar.tags[lang].map((tag) => (
-            <span key={tag} style={{ ...Bd, fontSize: 11, letterSpacing: "0.07em", color: GHOST }}>— {tag}</span>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
