@@ -27,6 +27,7 @@ import {
   type Lang,
 } from "@/lib/theme";
 import { featuredShowcases, publishedShowcases } from "@/content/showcases";
+import { DriveModelSection } from "@/components/sections/DriveModelSection";
 
 const D = fontDisplay;
 const S = fontSerif;
@@ -183,6 +184,9 @@ function HomeInner({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+
+      {/* D.R.I.V.E. STRATEGIC MODEL */}
+      <DriveModelSection lang={lang} />
 
       {/* SOLUTIONS */}
       <section id="solutions" style={{ background: aurora({ t: "70% 60%", p: "15% 35%", opacity: 0.55 }), paddingTop: "clamp(64px, 8vw, 100px)", paddingBottom: "clamp(64px, 8vw, 100px)", paddingLeft: 28, paddingRight: 28 }} className="lg:px-12">
