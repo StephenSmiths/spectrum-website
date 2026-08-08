@@ -16,8 +16,36 @@
     />
     <title>Spectrum Total Solutions | 天域策略顧問有限公司</title>
   </head>
-  <body>
-    <div id="root"></div>
+  <body style="margin:0;background:#060C18;color:#EEF0F8;">
+    <div id="root">
+      <!-- Visible before React mounts / if JS cache fails — replaced on hydrate -->
+      <div
+        style="
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          font-family: system-ui, sans-serif;
+          letter-spacing: 0.18em;
+          text-align: center;
+          padding: 24px;
+        "
+      >
+        <p style="margin: 0; font-size: 22px; font-weight: 800">SPECTRUM</p>
+        <p style="margin: 0; font-size: 12px; opacity: 0.55; letter-spacing: 0.12em">
+          Loading…
+        </p>
+        <noscript>
+          <p style="margin: 16px 0 0; font-size: 13px; opacity: 0.8; letter-spacing: 0.04em; max-width: 36em">
+            JavaScript is required to view this site. Please enable it, then hard-refresh
+            (Cmd/Ctrl + Shift + R).
+          </p>
+        </noscript>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
