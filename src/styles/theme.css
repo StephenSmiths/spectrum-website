@@ -223,3 +223,85 @@
     font-size: clamp(52px, 18vw, 96px);
   }
 }
+
+/* Core Advantages — gradient slogan + flowing card sheen */
+.core-advantages__gradient-text {
+  display: inline-block;
+  background: linear-gradient(
+    105deg,
+    #3dd9c5 0%,
+    #eef0f8 28%,
+    #c4975a 58%,
+    #9b8fe4 82%,
+    #3dd9c5 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(61, 217, 197, 0.28));
+  animation: core-advantages-gradient-shift 8s ease-in-out infinite;
+}
+
+@keyframes core-advantages-gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.core-advantages__card {
+  overflow: hidden;
+}
+
+.core-advantages__sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(238, 240, 248, 0.08) 48%,
+    transparent 66%
+  );
+  transform: translateX(-60%);
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+.core-advantages__card.is-hovered .core-advantages__sheen {
+  opacity: 1;
+  animation: core-advantages-sheen-sweep 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.core-advantages__card > *:not(.core-advantages__sheen) {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes core-advantages-sheen-sweep {
+  from {
+    transform: translateX(-70%);
+  }
+  to {
+    transform: translateX(70%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .core-advantages__gradient-text {
+    animation: none;
+    background-position: 40% 50%;
+  }
+
+  .core-advantages__card.is-hovered .core-advantages__sheen {
+    animation: none;
+    opacity: 0.35;
+    transform: none;
+  }
+}

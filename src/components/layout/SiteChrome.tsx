@@ -18,6 +18,7 @@ import { CtaProvider } from "@/components/showcase/CtaContext";
 
 const NAV_HOME = [
   { id: "manifesto", en: "Manifesto", zh: "品牌宣言" },
+  { id: "advantages", en: "Advantages", zh: "核心優勢" },
   { id: "approach", en: "Approach", zh: "方法論" },
   { id: "drive", en: "D.R.I.V.E.", zh: "D.R.I.V.E." },
   { id: "solutions", en: "Solutions", zh: "服務" },
