@@ -8,6 +8,7 @@ import { ShowcaseRail } from "@/components/showcase/ShowcaseRail";
 import { useCta } from "@/components/showcase/CtaContext";
 import { DISCLAIMER } from "@/lib/disclaimer";
 import { usePersistentLang } from "@/lib/lang";
+import { scrollToId } from "@/lib/scrollToId";
 import {
   SHOWCASE_AUTO_CYCLE_MS,
   useShowcaseBillboardCycle,
@@ -71,12 +72,10 @@ function HomeInner({ lang }: { lang: Lang }) {
   } = useShowcaseBillboardCycle(browseIdeas);
 
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.slice(1);
-      requestAnimationFrame(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      });
-    }
+    if (!location.hash) return;
+    const id = decodeURIComponent(location.hash.slice(1));
+    // SPA first paint often mounts after the browser's native hash jump misses.
+    return scrollToId(id, { behavior: "smooth" });
   }, [location.hash]);
 
   return (

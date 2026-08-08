@@ -193,6 +193,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Clear fixed header when jumping to #section anchors */
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     background-color: var(--background);
