@@ -23,6 +23,7 @@ type SuiteCard = {
   accent: string;
   accentSoft: string;
   keyLabel: string;
+  zhLabel: string;
   icon: ReactNode;
   title: { en: string; zh: string };
   subtitle: { en: string; zh: string };
@@ -31,7 +32,7 @@ type SuiteCard = {
 
 const COPY = {
   labelLeft: { en: "Ultimate Suite", zh: "三合一旗艦大禮包" },
-  labelRight: { en: "Flagship Offer", zh: "旗艦專案" },
+  labelRight: { en: "Toolset · Skillset · Mindset", zh: "Toolset · Skillset · Mindset" },
   title: {
     en: "【Flagship】Enterprise AI Digital Leap Suite",
     zh: "【旗艦專案】企業 AI 數位躍遷全效方案",
@@ -48,10 +49,11 @@ const CARDS: SuiteCard[] = [
     accent: TEAL,
     accentSoft: "rgba(61,217,197,0.22)",
     keyLabel: "TOOLSET",
+    zhLabel: "工具集",
     icon: <ChipGearIcon />,
     title: {
-      en: "1. AI Enterprise Operating System (Toolset)",
-      zh: "1. AI 企業作業系統 (Toolset)",
+      en: "AI Enterprise Operating System",
+      zh: "AI 企業作業系統",
     },
     subtitle: { en: "Hardcore Infrastructure", zh: "硬核基建" },
     body: {
@@ -64,10 +66,11 @@ const CARDS: SuiteCard[] = [
     accent: GOLD,
     accentSoft: "rgba(196,151,90,0.22)",
     keyLabel: "SKILLSET",
+    zhLabel: "技能集",
     icon: <HumanTechIcon />,
     title: {
-      en: "2. Human–AI Collaboration Training (Skillset)",
-      zh: "2. 人機協同實戰培訓 (Skillset)",
+      en: "Human–AI Collaboration Training",
+      zh: "人機協同實戰培訓",
     },
     subtitle: { en: "Team Empowerment", zh: "團隊賦能" },
     body: {
@@ -80,10 +83,11 @@ const CARDS: SuiteCard[] = [
     accent: PURPLE,
     accentSoft: "rgba(155,143,228,0.22)",
     keyLabel: "MINDSET",
+    zhLabel: "思維集",
     icon: <StrategyBrainIcon />,
     title: {
-      en: "3. Executive Strategy Coaching (Mindset)",
-      zh: "3. 高階戰略顧問教練 (Mindset)",
+      en: "Executive Strategy Coaching",
+      zh: "高階戰略顧問教練",
     },
     subtitle: { en: "Decision Navigation", zh: "決策導航" },
     body: {
@@ -139,7 +143,7 @@ export function UltimateSuiteSection({ lang }: { lang: Lang }) {
               alignItems: "center",
               justifyContent: "center",
               gap: 16,
-              maxWidth: 520,
+              maxWidth: 640,
               margin: "0 auto",
             }}
           >
@@ -198,6 +202,50 @@ export function UltimateSuiteSection({ lang }: { lang: Lang }) {
           >
             {COPY.subtitle[lang]}
           </p>
+
+          {/* Keyword hook strip — keep the three SET names memorable */}
+          <div
+            className="ultimate-suite__hook"
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "baseline",
+              justifyContent: "center",
+              gap: "clamp(10px, 2vw, 22px)",
+              marginTop: 36,
+            }}
+          >
+            {CARDS.map((card, i) => (
+              <span key={card.id} style={{ display: "flex", alignItems: "baseline", gap: "clamp(10px, 2vw, 22px)" }}>
+                <span
+                  style={{
+                    ...D,
+                    fontWeight: 900,
+                    fontSize: "clamp(28px, 4.5vw, 52px)",
+                    letterSpacing: "-0.02em",
+                    lineHeight: 0.95,
+                    color: card.accent,
+                    textShadow: `0 0 28px ${card.accentSoft}`,
+                  }}
+                >
+                  {card.keyLabel}
+                </span>
+                {i < CARDS.length - 1 ? (
+                  <span
+                    aria-hidden
+                    style={{
+                      ...D,
+                      fontWeight: 300,
+                      fontSize: "clamp(18px, 2.5vw, 28px)",
+                      color: "rgba(238,240,248,0.22)",
+                    }}
+                  >
+                    ×
+                  </span>
+                ) : null}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
         <div
@@ -287,16 +335,17 @@ function SuiteCardItem({
       <div
         style={{
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-start",
           justifyContent: "space-between",
-          marginBottom: 26,
+          gap: 12,
+          marginBottom: 18,
         }}
       >
         <div
           className="ultimate-suite__icon"
           style={{
-            width: 56,
-            height: 56,
+            width: 48,
+            height: 48,
             display: "grid",
             placeItems: "center",
             borderRadius: 2,
@@ -305,22 +354,54 @@ function SuiteCardItem({
             color: card.accent,
             boxShadow: isActive ? `0 0 28px ${card.accentSoft}` : "none",
             transition: "all 0.35s ease",
+            flexShrink: 0,
           }}
         >
           {card.icon}
         </div>
         <span
           style={{
-            ...D,
-            fontWeight: 800,
-            fontSize: 12,
-            letterSpacing: "0.16em",
+            ...Bd,
+            fontSize: 11,
+            fontWeight: 600,
+            letterSpacing: "0.18em",
             color: isActive ? card.accent : GOLD,
             transition: "color 0.3s ease",
+            paddingTop: 4,
+          }}
+        >
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+
+      {/* Hero keyword — the brand hook */}
+      <div style={{ marginBottom: 10 }}>
+        <h3
+          style={{
+            ...D,
+            fontWeight: 900,
+            fontSize: "clamp(36px, 4.2vw, 56px)",
+            letterSpacing: "-0.025em",
+            lineHeight: 0.9,
+            color: isActive ? card.accent : IVORY,
+            margin: 0,
+            textShadow: isActive ? `0 0 32px ${card.accentSoft}` : "none",
+            transition: "color 0.35s ease, text-shadow 0.35s ease",
           }}
         >
           {card.keyLabel}
-        </span>
+        </h3>
+        <p
+          style={{
+            ...S,
+            fontSize: 14,
+            color: DIM,
+            letterSpacing: "0.04em",
+            marginTop: 8,
+          }}
+        >
+          {card.zhLabel}
+        </p>
       </div>
 
       <p
@@ -338,19 +419,19 @@ function SuiteCardItem({
         {card.subtitle[lang]}
       </p>
 
-      <h3
+      <p
         style={{
           ...Bd,
-          fontSize: "clamp(16px, 1.55vw, 20px)",
+          fontSize: "clamp(15px, 1.4vw, 18px)",
           fontWeight: 600,
           letterSpacing: "0.01em",
           color: IVORY,
           lineHeight: 1.4,
-          marginBottom: 16,
+          marginBottom: 14,
         }}
       >
         {card.title[lang]}
-      </h3>
+      </p>
 
       <p
         style={{
@@ -380,7 +461,7 @@ function SuiteCardItem({
 
 function ChipGearIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden>
       <rect x="4" y="4" width="20" height="20" rx="2" stroke="currentColor" strokeWidth="1.4" />
       <rect x="9" y="9" width="10" height="10" rx="1" stroke="currentColor" strokeWidth="1.25" opacity="0.85" />
       <circle cx="14" cy="14" r="2.2" fill="currentColor" />
@@ -404,7 +485,7 @@ function ChipGearIcon() {
 
 function HumanTechIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden>
       <circle cx="10.5" cy="8.5" r="3" stroke="currentColor" strokeWidth="1.35" />
       <path
         d="M4.8 20.5C5.2 16.8 7.4 14.8 10.5 14.8C13.6 14.8 15.8 16.8 16.2 20.5"
@@ -439,7 +520,7 @@ function HumanTechIcon() {
 
 function StrategyBrainIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden>
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden>
       <path
         d="M10.2 7.2C8.2 7.6 6.8 9.4 6.8 11.4C6.8 12.2 7 12.9 7.4 13.5C6.4 14.2 5.8 15.4 5.8 16.8C5.8 19.1 7.5 21 9.8 21.3V22.6C9.8 23.4 10.4 24 11.2 24H12.6"
         stroke="currentColor"
