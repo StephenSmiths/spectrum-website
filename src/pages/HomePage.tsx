@@ -27,6 +27,7 @@ import {
   type Lang,
 } from "@/lib/theme";
 import { featuredShowcases, publishedShowcases } from "@/content/showcases";
+import { CoreAdvantagesSection } from "@/components/sections/CoreAdvantagesSection";
 import { DriveModelSection } from "@/components/sections/DriveModelSection";
 
 const D = fontDisplay;
@@ -173,6 +174,9 @@ function HomeInner({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+
+      {/* CORE ADVANTAGES */}
+      <CoreAdvantagesSection lang={lang} />
 
       {/* APPROACH */}
       <section id="approach" style={{ background: aurora({ t: "80% 30%", p: "20% 70%", opacity: 0.6 }), paddingTop: "clamp(64px, 8vw, 100px)", paddingBottom: 0, paddingLeft: 28, paddingRight: 28 }} className="lg:px-12">
