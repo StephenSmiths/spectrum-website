@@ -32,7 +32,7 @@ export const fontSerif: CSSProperties = {
   fontWeight: 300,
 };
 export const fontBody: CSSProperties = {
-  fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+  fontFamily: "'Inter', 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif",
 };
 
 export type Lang = "en" | "zh";
