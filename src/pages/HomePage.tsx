@@ -19,7 +19,6 @@ import {
   GHOST,
   GOLD,
   IVORY,
-  PURPLE,
   TEAL,
   aurora,
   fontBody,
@@ -110,33 +109,7 @@ function HomeInner({ lang }: { lang: Lang }) {
         </div>
       </section>
 
-      {/* MANIFESTO */}
-      <section id="manifesto" style={{ overflow: "hidden" }}>
-        <div className="manifesto-diptych">
-          <div className="manifesto-panel" style={{ background: aurora({ t: "15% 50%", p: "90% 20%", opacity: 1.1 }), borderRight: "1px solid rgba(61,217,197,0.1)", borderBottom: "1px solid rgba(61,217,197,0.08)" }}>
-            <span style={{ ...Bd, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: GHOST }}>
-              {lang === "en" ? "01 · Brand Manifesto" : "01 · 品牌宣言"}
-            </span>
-            <div>
-              <p className="manifesto-title" style={{ ...D, fontWeight: 900, letterSpacing: "-0.025em", color: IVORY, margin: "0 0 28px", userSelect: "none" }}>MASS<br />TO<br />CLASS.</p>
-              <p style={{ ...S, fontSize: "clamp(22px, 3.2vw, 46px)", color: TEAL, lineHeight: 1.05, letterSpacing: "0.05em", marginBottom: 14 }}>博觀而約取</p>
-              <p style={{ ...S, fontSize: "clamp(13px, 1.2vw, 16px)", color: DIM, lineHeight: 1.75 }}>From volume to excellence —<br />gather widely, choose precisely.</p>
-            </div>
-          </div>
-          <div className="manifesto-panel" style={{ background: aurora({ t: "10% 20%", p: "80% 55%", opacity: 1.0 }), borderBottom: "1px solid rgba(155,143,228,0.08)" }}>
-            <span style={{ ...Bd, fontSize: 10, letterSpacing: "0.22em", textTransform: "uppercase", color: GHOST }}>
-              {lang === "en" ? "02 · Brand Manifesto" : "02 · 品牌宣言"}
-            </span>
-            <div>
-              <p className="manifesto-title" style={{ ...D, fontWeight: 900, letterSpacing: "-0.025em", color: IVORY, margin: "0 0 28px", userSelect: "none" }}>LAST<br />TO<br />BLAST.</p>
-              <p style={{ ...S, fontSize: "clamp(22px, 3.2vw, 46px)", color: PURPLE, lineHeight: 1.05, letterSpacing: "0.05em", marginBottom: 14 }}>厚積而薄發</p>
-              <p style={{ ...S, fontSize: "clamp(13px, 1.2vw, 16px)", color: DIM, lineHeight: 1.75 }}>From patience to breakthrough —<br />build deep, then release with force.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CORE ADVANTAGES */}
+      {/* CORE ADVANTAGES — Mass to Class / Last to Blast (brand soul; Manifesto diptych removed as duplicate) */}
       <CoreAdvantagesSection lang={lang} />
 
       {/* ULTIMATE SUITE — Toolset × Skillset × Mindset (replaces Approach pillars) */}
