@@ -14,6 +14,7 @@ import {
   type Lang,
 } from "@/lib/theme";
 import { DISCLAIMER } from "@/lib/disclaimer";
+import { scrollToId } from "@/lib/scrollToId";
 import { CtaProvider } from "@/components/showcase/CtaContext";
 
 const NAV_HOME = [
@@ -89,6 +90,12 @@ export function SiteChrome({
                 <a
                   key={item.id}
                   href={href}
+                  onClick={(e) => {
+                    if (!onHome) return;
+                    e.preventDefault();
+                    window.history.pushState(null, "", `#${item.id}`);
+                    scrollToId(item.id, { behavior: "smooth" });
+                  }}
                   style={{ ...fontBody, fontSize: 12, letterSpacing: "0.04em", color: DIM, textDecoration: "none" }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = TEAL)}
                   onMouseLeave={(e) => (e.currentTarget.style.color = DIM)}
@@ -163,7 +170,13 @@ export function SiteChrome({
                 <a
                   key={item.id}
                   href={onHome ? `#${item.id}` : `/#${item.id}`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => {
+                    setMobileOpen(false);
+                    if (!onHome) return;
+                    e.preventDefault();
+                    window.history.pushState(null, "", `#${item.id}`);
+                    scrollToId(item.id, { behavior: "smooth" });
+                  }}
                   style={{
                     display: "block",
                     fontSize: 18,
