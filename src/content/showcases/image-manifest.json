@@ -1,0 +1,438 @@
+{
+  "novaflow": [
+    {
+      "file": "/showcase/novaflow/01.png",
+      "src": "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png"
+    },
+    {
+      "file": "/showcase/novaflow/02.png",
+      "src": "https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png"
+    },
+    {
+      "file": "/showcase/novaflow/03.png",
+      "src": "https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/og_image_website_3_afd66761a9.png"
+    },
+    {
+      "file": "/showcase/novaflow/04.png",
+      "src": "https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/teams_of_agents_9a90248bb1.png"
+    },
+    {
+      "file": "/showcase/novaflow/05.png",
+      "src": "https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/self_host_ea0cb26eff.png"
+    }
+  ],
+  "pilotboard": [
+    {
+      "file": "/showcase/pilotboard/01.webp",
+      "src": "https://media.docs.plane.so/GitHub-readme/github-top.webp"
+    },
+    {
+      "file": "/showcase/pilotboard/02.webp",
+      "src": "https://media.docs.plane.so/GitHub-readme/github-work-items.webp"
+    },
+    {
+      "file": "/showcase/pilotboard/03.webp",
+      "src": "https://media.docs.plane.so/GitHub-readme/github-cycles.webp"
+    },
+    {
+      "file": "/showcase/pilotboard/04.webp",
+      "src": "https://media.docs.plane.so/GitHub-readme/github-modules.webp"
+    },
+    {
+      "file": "/showcase/pilotboard/05.webp",
+      "src": "https://media.docs.plane.so/GitHub-readme/github-views.webp"
+    }
+  ],
+  "tidecrm": [
+    {
+      "file": "/showcase/tidecrm/01.webp",
+      "src": "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-website/public/images/readme/github-cover-light.webp"
+    },
+    {
+      "file": "/showcase/tidecrm/02.webp",
+      "src": "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-website/public/images/readme/v2-build-apps-light.webp"
+    },
+    {
+      "file": "/showcase/tidecrm/03.webp",
+      "src": "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-website/public/images/readme/v2-version-control-light.webp"
+    },
+    {
+      "file": "/showcase/tidecrm/04.webp",
+      "src": "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-website/public/images/readme/v2-all-tools-light.webp"
+    },
+    {
+      "file": "/showcase/tidecrm/05.webp",
+      "src": "https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-website/public/images/readme/v2-ai-agents-light.webp"
+    }
+  ],
+  "caredesk": [
+    {
+      "file": "/showcase/caredesk/01.png",
+      "src": "https://raw.githubusercontent.com/chatwoot/chatwoot/develop/.github/screenshots/dashboard.png"
+    },
+    {
+      "file": "/showcase/caredesk/02.png",
+      "src": "https://www.chatwoot.com/images/preview.png#ui-crop"
+    },
+    {
+      "file": "/showcase/caredesk/03.png",
+      "src": "dashboard-focus-crop"
+    },
+    {
+      "file": "/showcase/caredesk/04.png",
+      "src": "crop-from-01"
+    },
+    {
+      "file": "/showcase/caredesk/05.png",
+      "src": "crop-from-01"
+    }
+  ],
+  "calendarkit": [
+    {
+      "file": "/showcase/calendarkit/01.png",
+      "src": "https://framerusercontent.com/images/pPSh5HDe1qaySb4R7xBgMHudhU.png"
+    },
+    {
+      "file": "/showcase/calendarkit/02.png",
+      "src": "https://framerusercontent.com/images/IduYmFERQLVMKIlBzb2suwqcRA.png#canvas"
+    },
+    {
+      "file": "/showcase/calendarkit/03.png",
+      "src": "booking-calendar-crop"
+    },
+    {
+      "file": "/showcase/calendarkit/04.png",
+      "src": "crop-from-01"
+    },
+    {
+      "file": "/showcase/calendarkit/05.png",
+      "src": "crop-from-03"
+    }
+  ],
+  "deepforge": [
+    {
+      "file": "/showcase/deepforge/01.png",
+      "src": "https://raw.githubusercontent.com/langgenius/dify/main/images/describe.png"
+    },
+    {
+      "file": "/showcase/deepforge/02.png",
+      "src": "https://raw.githubusercontent.com/langgenius/dify/main/images/models.png"
+    },
+    {
+      "file": "/showcase/deepforge/03.png",
+      "src": "https://raw.githubusercontent.com/langgenius/dify/main/images/describe.png#detail-crop"
+    },
+    {
+      "file": "/showcase/deepforge/04.png",
+      "src": "https://raw.githubusercontent.com/langgenius/dify/main/images/GitHub_README_if.png"
+    },
+    {
+      "file": "/showcase/deepforge/05.png",
+      "src": "crop-from-01"
+    }
+  ],
+  "documark": [
+    {
+      "file": "/showcase/documark/01.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/documark/02.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/documark/03.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/documark/04.png",
+      "src": ""
+    }
+  ],
+  "inkledger": [
+    {
+      "file": "/showcase/inkledger/01.jpg",
+      "src": ""
+    },
+    {
+      "file": "/showcase/inkledger/02.jpg",
+      "src": ""
+    },
+    {
+      "file": "/showcase/inkledger/03.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/inkledger/04.jpg",
+      "src": ""
+    }
+  ],
+  "binderdocs": [
+    {
+      "file": "/showcase/binderdocs/01.webp",
+      "src": "https://www.bookstackapp.com/images/bookstack-hero-screenshot.webp"
+    },
+    {
+      "file": "/showcase/binderdocs/02.png",
+      "src": "https://www.bookstackapp.com/images/screenshots/thumb_page-view.png"
+    },
+    {
+      "file": "/showcase/binderdocs/03.png",
+      "src": "https://www.bookstackapp.com/images/screenshots/thumb_page-edit.png"
+    },
+    {
+      "file": "/showcase/binderdocs/04.png",
+      "src": "https://www.bookstackapp.com/images/screenshots/thumb_books-view.png"
+    },
+    {
+      "file": "/showcase/binderdocs/05.png",
+      "src": "https://www.bookstackapp.com/images/screenshots/thumb_book-overview.png"
+    }
+  ],
+  "easyslot": [
+    {
+      "file": "/showcase/easyslot/01.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/easyslot/02.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/easyslot/03.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/easyslot/04.png",
+      "src": ""
+    }
+  ],
+  "papertrail": [
+    {
+      "file": "/showcase/papertrail/01.png",
+      "src": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/documents-smallcards-dark.png"
+    },
+    {
+      "file": "/showcase/papertrail/02.png",
+      "src": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/bulk-edit.png"
+    },
+    {
+      "file": "/showcase/papertrail/03.png",
+      "src": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/correspondents.png"
+    },
+    {
+      "file": "/showcase/papertrail/04.png",
+      "src": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/custom_field1.png"
+    },
+    {
+      "file": "/showcase/papertrail/05.png",
+      "src": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/custom_field2.png"
+    }
+  ],
+  "letterreach": [
+    {
+      "file": "/showcase/letterreach/01.webp",
+      "src": ""
+    },
+    {
+      "file": "/showcase/letterreach/02.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/letterreach/03.webp",
+      "src": ""
+    },
+    {
+      "file": "/showcase/letterreach/04.png",
+      "src": "https://raw.githubusercontent.com/knadh/listmonk/master/docs/docs/content/images/archived-campaign-metadata.png"
+    },
+    {
+      "file": "/showcase/letterreach/05.webp",
+      "src": "https://listmonk.app/static/images/splash.webp"
+    },
+    {
+      "file": "/showcase/letterreach/06.png",
+      "src": "crop-from-04"
+    }
+  ],
+  "meshteam": [
+    {
+      "file": "/showcase/meshteam/01.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/meshteam/05.png",
+      "src": "https://user-images.githubusercontent.com/785518/156696288-d25b7528-7d4b-4c0a-94d5-ffddfecf8adb.png"
+    },
+    {
+      "file": "/showcase/meshteam/06.png",
+      "src": "https://user-images.githubusercontent.com/785518/156696413-01f34fb1-91da-4377-a378-14355a65076e.png"
+    },
+    {
+      "file": "/showcase/meshteam/02.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/meshteam/03.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/meshteam/04.png",
+      "src": ""
+    }
+  ],
+  "vaultkeep": [
+    {
+      "file": "/showcase/vaultkeep/01.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/vaultkeep/02.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/vaultkeep/03.png",
+      "src": ""
+    },
+    {
+      "file": "/showcase/vaultkeep/04.png",
+      "src": "crop-from-01"
+    },
+    {
+      "file": "/showcase/vaultkeep/05.png",
+      "src": "crop-from-01"
+    }
+  ],
+  "upkeepmonitor": [
+    {
+      "file": "/showcase/upkeepmonitor/01.jpg",
+      "src": "https://uptime.kuma.pet/img/light.jpg"
+    },
+    {
+      "file": "/showcase/upkeepmonitor/02.jpg",
+      "src": "https://user-images.githubusercontent.com/1336778/212262296-e6205815-ad62-488c-83ec-a5b0d0689f7c.jpg"
+    },
+    {
+      "file": "/showcase/upkeepmonitor/03.jpg",
+      "src": "https://louislam.net/uptimekuma/2.jpg"
+    },
+    {
+      "file": "/showcase/upkeepmonitor/04.jpg",
+      "src": "https://louislam.net/uptimekuma/3.jpg"
+    }
+  ],
+  "zonedesk": [
+    {
+      "file": "/showcase/zonedesk/01.png",
+      "src": "https://zammad.org/media/pages/screenshots/3ab0b9cf69-1701860226/dashboard-1280x.png"
+    },
+    {
+      "file": "/showcase/zonedesk/02.png",
+      "src": "https://zammad.org/media/pages/screenshots/8d0bb1e628-1701860226/ticket_zoom-1280x.png"
+    },
+    {
+      "file": "/showcase/zonedesk/03.png",
+      "src": "https://zammad.org/media/pages/screenshots/1ab131591a-1701860226/organization_profile-1280x.png"
+    },
+    {
+      "file": "/showcase/zonedesk/04.png",
+      "src": "https://zammad.org/media/pages/screenshots/41c027376a-1701860226/admin_chat_preview-1280x.png"
+    }
+  ],
+  "gearitsm": [
+    {
+      "file": "/showcase/gearitsm/01.png",
+      "src": "https://raw.githubusercontent.com/glpi-project/glpi/10.0/bugfixes/pics/screenshots/dashboard.png"
+    },
+    {
+      "file": "/showcase/gearitsm/02.png",
+      "src": "https://raw.githubusercontent.com/glpi-project/glpi/10.0/bugfixes/pics/screenshots/ticket.png"
+    },
+    {
+      "file": "/showcase/gearitsm/03.png",
+      "src": "https://raw.githubusercontent.com/glpi-project/glpi/10.0/bugfixes/pics/screenshots/asset.png"
+    },
+    {
+      "file": "/showcase/gearitsm/04.png",
+      "src": "https://raw.githubusercontent.com/glpi-project/glpi/10.0/bugfixes/pics/screenshots/timeline.png"
+    }
+  ],
+  "askcommunity": [
+    {
+      "file": "/showcase/askcommunity/01.png",
+      "src": "https://raw.githubusercontent.com/apache/answer/main/docs/img/screenshot.png"
+    },
+    {
+      "file": "/showcase/askcommunity/02.png",
+      "src": "crop-from-01"
+    },
+    {
+      "file": "/showcase/askcommunity/03.png",
+      "src": "crop-from-01"
+    }
+  ],
+  "freedesk": [
+    {
+      "file": "/showcase/freedesk/01.png",
+      "src": "https://freescout.net/wp-content/uploads/2019/01/freescout-screenshot.png"
+    },
+    {
+      "file": "/showcase/freedesk/02.png",
+      "src": "https://freescout.net/wp-content/uploads/2019/01/freescout-dashboard.png"
+    },
+    {
+      "file": "/showcase/freedesk/03.png",
+      "src": "https://freescout.net/wp-content/uploads/2019/01/freescout-conversation.png"
+    },
+    {
+      "file": "/showcase/freedesk/04.png",
+      "src": "https://freescout.net/wp-content/uploads/2019/01/freescout-mailbox-settings.png"
+    }
+  ],
+  "roundvote": [
+    {
+      "file": "/showcase/roundvote/05.png",
+      "src": "crop-from-hero-shot"
+    },
+    {
+      "file": "/showcase/roundvote/02.webp",
+      "src": "https://raw.githubusercontent.com/lukevella/rallly/main/apps/web/public/screenshots/poll.webp"
+    },
+    {
+      "file": "/showcase/roundvote/03.webp",
+      "src": "https://raw.githubusercontent.com/lukevella/rallly/main/apps/web/public/screenshots/polls.webp"
+    },
+    {
+      "file": "/showcase/roundvote/01.webp",
+      "src": "https://raw.githubusercontent.com/lukevella/rallly/main/apps/web/public/screenshots/home.webp"
+    }
+  ],
+  "stocktrack": [
+    {
+      "file": "/showcase/stocktrack/01.png",
+      "src": "https://snipeitapp.com/img/screenshots/screenshot-dashboard.png"
+    },
+    {
+      "file": "/showcase/stocktrack/02.png",
+      "src": "https://snipeitapp.com/img/screenshots/screenshot-asset-list.png"
+    },
+    {
+      "file": "/showcase/stocktrack/03.png",
+      "src": "https://snipeitapp.com/img/screenshots/screenshot-asset-detail.png"
+    }
+  ],
+  "clearstatus": [
+    {
+      "file": "/showcase/clearstatus/01.png",
+      "src": "https://cachethq.io/images/og/home.png"
+    },
+    {
+      "file": "/showcase/clearstatus/02.png",
+      "src": "crop-from-01"
+    },
+    {
+      "file": "/showcase/clearstatus/03.png",
+      "src": "crop-from-01"
+    }
+  ]
+}
